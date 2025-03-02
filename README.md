@@ -59,7 +59,4 @@
 
 `If there are any issues, please let me know. I will try to help you as much as I can.`
 
-<<<<<<< HEAD
-=======
 
->>>>>>> b7b02052941d9089023a523f1d6bc3bacc54a275
