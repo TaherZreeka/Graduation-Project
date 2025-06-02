@@ -14,6 +14,10 @@
                 <div class="sb-nav-link-icon"><i class="fa-solid fa-sun"></i></div>
                 تطبيق الطقس
             </a>
+            <a class="nav-link getPopup" href="{{ route('student.todo_list') }}">
+                <div class="sb-nav-link-icon"><i class="fa-solid fa-list"></i></div>
+                قائمة المهام
+            </a>
             <div class="sb-sidenav-menu-heading">الإضافات</div>
             <a class="nav-link" href="/student/profile">
                 <div class="sb-nav-link-icon"><i class="fa fa-user" aria-hidden="true"></i></div>

@@ -159,6 +159,7 @@ Route::middleware(['auth', TeacherMiddleware::class])->prefix('teacher')->group(
 // Student routes
 Route::middleware(['auth', StudentMiddleware::class])->prefix('student')->group(function () {
     Route::get('/dashboard', [StudentController::class, 'index'])->name('student.dashboard');
+    Route::get('/todo_list', [StudentStdController::class, 'todo_list'])->name('student.todo_list');
 // Weather App (student Access)
     Route::get('/weather', [StudentWeatherController::class, 'index'])->name('students.weather.index');
     Route::post('/weather', [StudentWeatherController::class, 'getWeather'])->name('students.weather.get');

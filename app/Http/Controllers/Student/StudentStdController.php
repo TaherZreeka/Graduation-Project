@@ -64,4 +64,9 @@ class StudentStdController extends Controller
 
         return redirect('/')->with('success', 'Login credentials updated successfully. Please login again.');
     }
+
+    public function todo_list()
+    {
+        return view('pages.students.todo_list');
+    }
 }
