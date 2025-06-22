@@ -2,10 +2,12 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <link rel="icon" href="{{ asset('assets/img/icon52-ar.ico') }}" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المعهد التقاني للحاسوب</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
@@ -285,7 +287,7 @@
                     <a href="#courses" class="text-gray-700 hover:text-blue-600">الدورات</a>
                     <a href="#testimonials" class="text-gray-700 hover:text-blue-600">آراء الطلاب</a>
                     <a href="#contact" class="text-gray-700 hover:text-blue-600">اتصل بنا</a>
-                    <a href="#"
+                    <a href="/"
                         class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">التسجيل</a>
                 </nav>
             </div>
@@ -368,7 +370,7 @@
 
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <img src="https://via.placeholder.com/600x400" alt="عن المعهد" class="rounded-lg shadow-lg w-full">
+                    <img src="{{ asset('assets/img/about.png') }}" alt="عن المعهد" class="rounded-lg shadow-lg w-full">
                 </div>
                 <div class="md:w-1/2">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">المعهد التقاني للحاسوب</h3>
@@ -518,7 +520,7 @@
                 <!-- Course 1 -->
                 <div class="course-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="relative">
-                        <img src="https://via.placeholder.com/600x400" alt="دورة تطوير الويب"
+                        <img src="{{ asset('assets/img/course02.jpg') }}" alt="دورة تطوير الويب"
                             class="w-full h-48 object-cover">
                         <div class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">جديد</div>
                         <div class="absolute top-2 right-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">الأكثر
@@ -546,7 +548,7 @@
                 <!-- Course 2 -->
                 <div class="course-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="relative">
-                        <img src="https://via.placeholder.com/600x400" alt="دورة الذكاء الاصطناعي"
+                        <img src="{{ asset('assets/img/course01.jpg') }}" alt="دورة الذكاء الاصطناعي"
                             class="w-full h-48 object-cover">
                         <div class="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded">مجاني</div>
                     </div>
@@ -571,7 +573,7 @@
                 <!-- Course 3 -->
                 <div class="course-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
                     <div class="relative">
-                        <img src="https://via.placeholder.com/600x400" alt="دورة أمن المعلومات"
+                        <img src="{{ asset('assets/img/course04.jpg') }}" alt="دورة أمن المعلومات"
                             class="w-full h-48 object-cover">
                     </div>
                     <div class="p-6">
@@ -701,7 +703,8 @@
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
-                        <img src="https://via.placeholder.com/80" alt="أحمد محمد" class="w-12 h-12 rounded-full mr-4">
+                        <img src="{{ asset('assets/img/student1 (1).jpg') }}" alt="أحمد محمد"
+                            class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">أحمد محمد</h4>
                             <div class="flex text-yellow-400">
@@ -722,7 +725,7 @@
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
-                        <img src="https://via.placeholder.com/80" alt="سارة عبدالله"
+                        <img src="{{ asset('assets/img/student6 (6).jpg') }}" alt="سارة عبدالله"
                             class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">سارة عبدالله</h4>
@@ -744,7 +747,8 @@
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card bg-gray-50 p-8 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
-                        <img src="https://via.placeholder.com/80" alt="خالد حسن" class="w-12 h-12 rounded-full mr-4">
+                        <img src="{{ asset('assets/img/student3 (3).jpg') }}" alt="خالد حسن"
+                            class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">خالد حسن</h4>
                             <div class="flex text-yellow-400">
@@ -796,7 +800,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Article 1 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://via.placeholder.com/600x400" alt="مقال عن الذكاء الاصطناعي"
+                    <img src="{{ asset('assets/img/post03.jpg') }}" alt="مقال عن الذكاء الاصطناعي"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center text-sm text-gray-500 mb-3">
@@ -814,7 +818,7 @@
 
                 <!-- Article 2 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://via.placeholder.com/600x400" alt="مقال عن أمن المعلومات"
+                    <img src="{{ asset('assets/img/post01.jpg') }}" alt="مقال عن أمن المعلومات"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center text-sm text-gray-500 mb-3">
@@ -832,7 +836,7 @@
 
                 <!-- Article 3 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://via.placeholder.com/600x400" alt="مقال عن تطوير الويب"
+                    <img src="{{ asset('assets/img/post01.jpg') }}" alt="مقال عن تطوير الويب"
                         class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center text-sm text-gray-500 mb-3">
@@ -862,34 +866,40 @@
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">شركاؤنا</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">أعضاء الهيئة التدريسية</h3>
                 <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-                <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/150x80" alt="شريك 1"
-                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center text-center">
+                <div>
+                    <img src="{{ asset('assets/img/default-user.jpg') }}" alt="شريك 1"
+                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300 mx-auto">
+                    <p class="mt-2 text-sm font-medium">المهندس هبة خليلو</p>
                 </div>
-                <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/150x80" alt="شريك 2"
-                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                <div>
+                    <img src="{{ asset('assets/img/default-user.jpg') }}" alt="شريك 2"
+                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300 mx-auto">
+                    <p class="mt-2 text-sm font-medium">المهندس أيهم عنتر</p>
                 </div>
-                <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/150x80" alt="شريك 3"
-                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                <div>
+                    <img src="{{ asset('assets/img/default-user.jpg') }}" alt="شريك 3"
+                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300 mx-auto">
+                    <p class="mt-2 text-sm font-medium">المهندس ليندا العلوني</p>
                 </div>
-                <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/150x80" alt="شريك 4"
-                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                <div>
+                    <img src="{{ asset('assets/img/default-user.jpg') }}" alt="شريك 4"
+                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300 mx-auto">
+                    <p class="mt-2 text-sm font-medium">المهندس جهاد عيسى</p>
                 </div>
-                <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/150x80" alt="شريك 5"
-                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                <div>
+                    <img src="{{ asset('assets/img/default-user.jpg') }}" alt="شريك 5"
+                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300 mx-auto">
+                    <p class="mt-2 text-sm font-medium">المهندس سمير سلامة</p>
                 </div>
-                <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/150x80" alt="شريك 6"
-                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                <div>
+                    <img src="{{ asset('assets/img/default-user.jpg') }}" alt="شريك 5"
+                        class="h-16 object-contain grayscale hover:grayscale-0 transition duration-300 mx-auto">
+                    <p class="mt-2 text-sm font-medium">المهندس سارة رضوان </p>
                 </div>
             </div>
         </div>
@@ -945,7 +955,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-gray-800 mb-1">العنوان</h4>
-                                    <p class="text-gray-600">شارع الجامعة، بناية رقم 15، دمشق، سوريا</p>
+                                    <p>شارع الجامعة.اللاذقية. سوريا</p>
                                 </div>
                             </div>
 
@@ -1017,7 +1027,7 @@
     <!-- Map Section -->
     <div class="h-96 bg-gray-200">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.987715668118!2d36.30646431520291!3d33.51058098074299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMwJzM4LjEiTiAzNsKwMTgnMzAuOSJF!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.2348195323223!2d35.80439177572193!3d35.52120017262747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15242db37662f1e5%3A0x4d210e47f3614a2!2sTishreen%20University!5e0!3m2!1sen!2s!4v1719060540000!5m2!1sen!2s"
             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
@@ -1098,7 +1108,7 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
-                            <span>شارع الجامعة، بناية رقم 15، دمشق، سوريا</span>
+                            <span>شارع الجامعة.اللاذقية. سوريا</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-phone-alt mt-1 mr-2"></i>
@@ -1113,7 +1123,7 @@
             </div>
 
             <div class="pt-6 border-t border-gray-800 text-center text-gray-400">
-                <p>&copy; 2023 المعهد التقاني للحاسوب. جميع الحقوق محفوظة.</p>
+                <p>&copy; 2025 المعهد التقاني للحاسوب. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
