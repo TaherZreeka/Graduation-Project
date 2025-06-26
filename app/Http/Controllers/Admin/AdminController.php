@@ -87,7 +87,7 @@ class AdminController extends Controller
         // Check if password change is requested
         if ($request->old_password && $request->password) {
             if (!password_verify($request->old_password, $user->password)) {
-                return back()->with('error', 'Old password is incorrect');
+                return back()->with('error', 'كلمة المرور القديمة غير صحيحة');
             }
 
             $user->update(['password' => bcrypt($request->password)]);
@@ -98,10 +98,10 @@ class AdminController extends Controller
             Auth::logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();
-            return redirect('/')->with('success', 'Email and password changed. Please login again.');
+            return redirect('/')->with('success', 'تم تغيير البريد الإلكتروني وكلمة المرور. يُرجى تسجيل الدخول مرة أخرى..');
         }
 
-        return redirect('/')->with('success', 'Password changed successfully');
+        return redirect('/')->with('success', 'تم تغيير كلمة المرور بنجاح');
     }
 
     public function showMessages()
@@ -114,5 +114,5 @@ class AdminController extends Controller
         return view('pages.admin.messages.show');
     }
 
-    
+
 }

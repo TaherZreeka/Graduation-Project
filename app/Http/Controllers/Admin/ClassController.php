@@ -90,7 +90,7 @@ class ClassController extends Controller
         ]);
 
         // redirect to the all classes page
-        return redirect('/admin/class/show')->with('success', 'Class created successfully');
+        return redirect('/admin/class/show')->with('success', 'تم إنشاء الفصل بنجاح');
     }
 
     public function show(Classes $class)
@@ -137,14 +137,14 @@ class ClassController extends Controller
         ]);
 
         // redirect to the show classes page with a success message
-        return redirect('/admin/class/show')->with('success', 'Class details updated successfully!');
+        return redirect('/admin/class/show')->with('success', 'تم تحديث تفاصيل الفصل بنجاح!');
     }
 
     public function destroy(Classes $class)
     {
         // TODO: implement the destroy method
         $class->delete();
-        return redirect('/admin/class/show')->with('success', 'Class deleted successfully');
+        return redirect('/admin/class/show')->with('success', 'تم حذف الفصل بنجاح');
     }
 
     public function assignStudentsView(Classes $class)
@@ -188,6 +188,6 @@ class ClassController extends Controller
         }
 
         // Redirect with a success message
-        return redirect('/admin/class/show')->with('success', 'Students and their subjects assigned to class successfully!');
+        return redirect('/admin/class/show')->with('success', 'تم توزيع الطلاب وموادهم الدراسية على الفصول بنجاح!');
     }
 }

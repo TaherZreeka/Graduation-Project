@@ -24,8 +24,8 @@ class SessionController extends Controller
         if (!Auth::attempt($attrs)) {
             throw ValidationException::withMessages([
                 // 'email' => 'Your provided credentials could not be verified.'
-                'email' => 'Invalid Email',
-                'password' => 'Invalid Password'
+                'email' => 'بريد إلكتروني غير صالح',
+                'password' => 'كلمة المرور غير صالحة'
             ]);
         }
 
@@ -38,16 +38,16 @@ class SessionController extends Controller
         // Redirect based on role
         switch ($role) {
             case 'Admin':
-                return redirect('/admin/dashboard')->with('greeting', 'Welcome back, Admin!');
+                return redirect('/admin/dashboard')->with('greeting', 'مرحباً بك  أيها المدير!');
             case 'Student':
-                return redirect('/student/dashboard')->with('greeting', 'Welcome back, Student!');
+                return redirect('/student/dashboard')->with('greeting', 'مرحباً بك  أيها الطالب!');
             case 'Teacher':
-                return redirect('/teacher/dashboard')->with('greeting', 'Welcome back, Teacher!');
+                return redirect('/teacher/dashboard')->with('greeting', 'مرحباً بك  أيها المعلم!');
             default:
                 // Handle if the user doesn't have a role
                 auth()->logout();
                 return redirect('/')->withErrors([
-                    'role' => 'User does not have a valid role.'
+                    'role' => 'المستخدم ليس لديه دور صالح.'
                 ]);
         }
     }
