@@ -81,7 +81,7 @@ class TeacherStudentController extends Controller
             ]);
         });
 
-        return redirect('/teacher/students/show')->with('success', 'Student added successfully');
+        return redirect('/teacher/students/show')->with('success', 'تمت إضافة الطالب بنجاح');
     }
 
     public function showAllStudents()
@@ -159,7 +159,7 @@ class TeacherStudentController extends Controller
             ]);
         });
 
-        return redirect('/teacher/students/show')->with('success', 'Student updated successfully');
+        return redirect('/teacher/students/show')->with('success', 'تم تحديث الطالب بنجاح');
     }
 
     public function destroy(Student $student)
@@ -170,7 +170,7 @@ class TeacherStudentController extends Controller
             $student->delete();
         });
 
-        return redirect('/teacher/students/show')->with('success', 'Student deleted successfully');
+        return redirect('/teacher/students/show')->with('success', 'تم حذف الطالب بنجاح');
     }
 
     public function assignSubjectsView(Student $student)
@@ -242,6 +242,6 @@ class TeacherStudentController extends Controller
         });
 
         // Redirect back with a success message
-        return redirect('/teacher/students/show')->with('success', 'Subjects updated successfully!');
+        return redirect('/teacher/students/show')->with('success', 'تم تحديث المواضيع بنجاح!');
     }
 }

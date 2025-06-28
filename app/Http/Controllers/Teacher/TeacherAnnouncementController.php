@@ -67,7 +67,7 @@ class TeacherAnnouncementController extends Controller
             }
         });
 
-        return redirect('/teacher/announcements/show')->with('success', 'Announcement created successfully');
+        return redirect('/teacher/announcements/show')->with('success', 'تم إنشاء الإعلان بنجاح');
     }
 
 
@@ -89,6 +89,6 @@ class TeacherAnnouncementController extends Controller
     public function destroy(Announcement $announcement)
     {
         $announcement->delete();
-        return redirect('/teacher/announcements/show')->with('success', 'Announcement deleted successfully');
+        return redirect('/teacher/announcements/show')->with('success', 'تم حذف الإعلان بنجاح');
     }
 }
