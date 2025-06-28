@@ -1,6 +1,17 @@
 # مشروع التخرج
-
 ![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/first_page.png)
+# screen photo
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(114).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(115).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(116).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(117).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(118).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(119).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(120).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(121).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(122).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(123).png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/Screenshot%20(124).png)
 # مخططات UML 
 # مخططات فصول UML لنظام إدارة المعهد
 
