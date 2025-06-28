@@ -9,7 +9,6 @@
 ![ UML](https://github.com/TaherZreeka/Graduation-Project/blob/main/docs/uml_class_diagram.png)
 
 
-# مخططات فصول UML لنظام إدارة المعهد
 
 ## نظرة عامة على النظام
 
