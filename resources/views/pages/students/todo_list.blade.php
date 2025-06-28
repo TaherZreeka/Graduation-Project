@@ -265,14 +265,6 @@
 
     <!-- Filters -->
     <div class="filters-container">
-        <!-- Priority Filter -->
-        <div class="filter-section priority-filter">
-            <span class="filter-label">الإولوية:</span>
-            <button class="filter-button" data-priority="low">منخفض</button>
-            <button class="filter-button" data-priority="medium">متوسط</button>
-            <button class="filter-button" data-priority="high">عالي</button>
-        </div>
-
         <!-- Status Filter -->
         <div class="filter-section status-filter">
             <span class="filter-label">الحالة:</span>

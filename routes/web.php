@@ -37,6 +37,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // Auth and login routes
+// Route::get('/website/institute', [FrontendController::class, 'index'])->name('frontend.institute');
 Route::get('/', [SessionController::class, 'create'])->name('login');
 Route::post('/', [SessionController::class, 'store'])->name('login');
 Route::get('/register', [StudentRegisterController::class, 'create'])->name('register');

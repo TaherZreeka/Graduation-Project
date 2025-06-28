@@ -51,7 +51,7 @@ class StreamController extends Controller
         ]);
 
         // redirect to the index page
-        return redirect()->route('admin.streams.index')->with('success', 'New Subject Stream added successfully');
+        return redirect()->route('admin.streams.index')->with('success', 'تمت إضافة الموضوع الجديد بنجاح');
     }
 
     public function show(SubjectStream $stream)
