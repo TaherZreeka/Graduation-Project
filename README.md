@@ -1,6 +1,13 @@
 # مشروع التخرج
 
 ![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/first_page.png)
+# مخططات UML 
+# مخططات فصول UML لنظام إدارة المعهد
+
+
+![  UML](https://github.com/TaherZreeka/Graduation-Project/blob/main/docs/sql.png)
+![ UML](https://github.com/TaherZreeka/Graduation-Project/blob/main/docs/uml_class_diagram.png)
+
 
 # مخططات فصول UML لنظام إدارة المعهد
 
