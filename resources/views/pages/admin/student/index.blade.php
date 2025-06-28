@@ -21,13 +21,13 @@
 <!--  -->
 
 <!-- Slotted content -->
-<h2>All Students</h2>
+<h2> الطلاب</h2>
 <table class="table table-responsive">
     <thead>
         <tr>
             <th>#</th>
-            <th>Name</th>
-            <th>Action</th>
+            <th>الأسم</th>
+            <th>التحكم</th>
         </tr>
     </thead>
     <tbody>
@@ -40,12 +40,12 @@
             <td>{{ $i }}</td>
             <td>{{ $student->first_name }} {{ $student->last_name }}</td>
             <td>
-                <a href="/admin/students/{{ $student->id }}" class="btn btn-primary btn-sm">View</a>
-                <a href="/admin/students/{{ $student->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/admin/students/{{ $student->id }}" class="btn btn-primary btn-sm">مشاهده</a>
+                <a href="/admin/students/{{ $student->id }}/edit" class="btn btn-warning btn-sm">تعديل</a>
                 <form action="/admin/students/{{ $student->id }}" method="POST" style="display: inline;">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    <button type="submit" class="btn btn-danger btn-sm">حذف</button>
                 </form>
             </td>
         </tr>
