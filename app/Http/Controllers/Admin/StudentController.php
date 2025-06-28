@@ -77,7 +77,7 @@ class StudentController extends Controller
             ]);
         });
 
-        return redirect('/admin/students/show')->with('success', 'Student added successfully');
+        return redirect('/admin/students/show')->with('success', 'تم إضافة الطالب بنجاح');
     }
 
 
@@ -143,13 +143,13 @@ class StudentController extends Controller
             'updated_at' => now(),
         ]);
 
-        return redirect('/admin/students/show')->with('success', 'Student updated successfully');
+        return redirect('/admin/students/show')->with('success', 'تم تحديث الطالب بنجاح');
     }
 
     public function destroy(Student $student)
     {
         $student->user()->delete();
-        return redirect('/admin/students/show')->with('success', 'Student deleted successfully');
+        return redirect('/admin/students/show')->with('success', 'تم حذف الطالب بنجاح');
     }
 
     public function uploadStudents(Request $request)
@@ -220,6 +220,6 @@ class StudentController extends Controller
             // Save the student record
             Student::create($data);
         }
-        return redirect('/admin/students/show')->with('success', 'Students uploaded successfully');
+        return redirect('/admin/students/show')->with('success', 'تم تحميل الطلاب بنجاح');
     }
 }

@@ -78,13 +78,13 @@ class StreamController extends Controller
             'stream_description' => $request->stream_description,
         ]);
 
-        return redirect()->route('admin.streams.index')->with('success', 'Stream updated successfully');
+        return redirect()->route('admin.streams.index')->with('success', 'تم تحديث البث بنجاح');
     }
 
     public function destroy(SubjectStream $stream)
     {
         $stream->delete();
-        return redirect()->route('admin.streams.index')->with('success', 'Stream deleted successfully');
+        return redirect()->route('admin.streams.index')->with('success', 'تم حذف البث بنجاح');
     }
 
     public function assignSubjectsView(SubjectStream $stream)

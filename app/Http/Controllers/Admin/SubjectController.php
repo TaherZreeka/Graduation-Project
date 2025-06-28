@@ -42,7 +42,7 @@ class SubjectController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect('/admin/subjects/show')->with('success', 'Subject added successfully');
+        return redirect('/admin/subjects/show')->with('success', 'تمت إضافة الموضوع بنجاح');
     }
 
     public function edit(Subject $subject)
@@ -66,13 +66,13 @@ class SubjectController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect('/admin/subjects/show')->with('success', 'Subject updated successfully');
+        return redirect('/admin/subjects/show')->with('success', 'تم تحديث الموضوع بنجاح');
     }
 
     public function destroy(Request $request, Subject $subject)
     {
         $subject->delete();
-        return redirect('/admin/subjects/show')->with('success', 'Subject deleted successfully');
+        return redirect('/admin/subjects/show')->with('success', 'تم حذف الموضوع بنجاح');
     }
 
     public function assignTeachersView()
@@ -118,7 +118,7 @@ class SubjectController extends Controller
                 ->whereIn('subject_id', $removedSubjects)
                 ->delete();
         }
-        return redirect('/admin/teachers/show')->with('success', 'Subject assiged to teacher successfully');
+        return redirect('/admin/teachers/show')->with('success', 'تم تعيين الموضوع للمعلم بنجاح');
     }
 
     public function showAssignedSubjectsForTeacher(Teacher $teacher)
@@ -159,6 +159,6 @@ class SubjectController extends Controller
             }
         }
 
-        return redirect('/admin/subjects/show')->with('success', 'Subjects uploaded successfully');
+        return redirect('/admin/subjects/show')->with('success', 'تم تحميل المواضيع بنجاح');
     }
 }

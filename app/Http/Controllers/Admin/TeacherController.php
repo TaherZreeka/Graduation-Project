@@ -59,7 +59,7 @@ class TeacherController extends Controller
         ]);
 
         // redirect to the teachers index page with a success message
-        return redirect('/admin/teachers/show')->with('success', 'Teacher added successfully');
+        return redirect('/admin/teachers/show')->with('success', 'تمت إضافة المعلم بنجاح');
     }
 
     public function showAllTeachers()
@@ -105,13 +105,13 @@ class TeacherController extends Controller
             'dob' => $request->dob,
         ]);
 
-        return redirect('/admin/teachers/show')->with('success', 'Teacher updated successfully');
+        return redirect('/admin/teachers/show')->with('success', 'تم تحديث المعلم بنجاح');
     }
 
     public function destroy(Teacher $teacher)
     {
         $teacher->user()->delete();
-        return redirect('/admin/teachers/show')->with('success', 'Teacher deleted successfully');
+        return redirect('/admin/teachers/show')->with('success', 'تم حذف المعلم بنجاح');
     }
 
     public function assignClassView(Teacher $teacher)
@@ -119,7 +119,7 @@ class TeacherController extends Controller
         // $classes = Cache::remember('classes_list', 60, function () {
         //     return Classes::all();
         // });
-        return redirect('/admin/teachers/show')->with('info', 'This feature is not implemented yet!');
+        return redirect('/admin/teachers/show')->with('info', 'لم يتم تنفيذ هذه الميزة بعد!');
     }
 
     public function assignClasses(Request $request, Teacher $teacher)
