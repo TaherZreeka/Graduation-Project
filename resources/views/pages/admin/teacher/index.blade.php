@@ -22,15 +22,15 @@
 <!--  -->
 
 
-<h2>All Teachers</h2>
+<h2>المدرسين</h2>
 <table class="table table-responsive">
     <thead>
         <tr>
             <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Subjects</th>
-            <th>Action</th>
+            <th>الأسم</th>
+            <th>الإيميل</th>
+            <th>المواضيع</th>
+            <th>التحكم</th>
         </tr>
     </thead>
     <tbody>
@@ -41,7 +41,8 @@
         @foreach ($teachers as $teacher)
         <tr>
             <td>{{ $i }}</td>
-            <td>{{ $teacher->salutation }} {{ $teacher->initials }} {{ $teacher->first_name }} {{ $teacher->last_name }}</td>
+            <td>{{ $teacher->salutation }} {{ $teacher->initials }} {{ $teacher->first_name }} {{ $teacher->last_name }}
+            </td>
             <td>{{ $teacher->user->email }}</td>
             <td>
                 <ul>
@@ -51,14 +52,14 @@
                 </ul>
             </td>
             <td>
-                <a href="/admin/teachers/{{ $teacher->id }}" class="btn btn-primary btn-sm">View</a>
+                <a href="/admin/teachers/{{ $teacher->id }}" class="btn btn-primary btn-sm">مشاهده</a>
                 {{-- /admin/teachers/{{ $teacher->id }}/assign-class --}}
-                <a class="btn btn-info btn-sm assign">Assign</a>
-                <a href="/admin/teachers/{{ $teacher->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+                <a class="btn btn-info btn-sm assign">تعيين</a>
+                <a href="/admin/teachers/{{ $teacher->id }}/edit" class="btn btn-warning btn-sm">تعديل</a>
                 <form action="/admin/teachers/{{ $teacher->id }}" method="POST" style="display: inline;">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    <button type="submit" class="btn btn-danger btn-sm">حذف</button>
                 </form>
             </td>
         </tr>
@@ -77,7 +78,7 @@
 <script>
     $(document).ready(function() {
         // set page title
-        $(document).prop('title', 'All Teachers | Student Management System');
+        $(document).prop('title', 'جميع المعلمين | نظام إدارة الطلاب');
 
         // Assign button click event
         $(".assign").click(function() {
