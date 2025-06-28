@@ -59,10 +59,10 @@ class StudentStdController extends Controller
             Auth::logout();
             $request->session()->invalidate();
             $request->session()->regenerateToken();
-            return redirect('/')->with('success', 'Login credentials updated. Please login again.');
+            return redirect('/')->with('success', 'تم تحديث بيانات تسجيل الدخول. يُرجى تسجيل الدخول مرة أخرى..');
         }
 
-        return redirect('/')->with('success', 'Login credentials updated successfully. Please login again.');
+        return redirect('/')->with('success', 'تم تحديث بيانات تسجيل الدخول بنجاح. يُرجى تسجيل الدخول مرة أخرى..');
     }
 
     public function todo_list()
