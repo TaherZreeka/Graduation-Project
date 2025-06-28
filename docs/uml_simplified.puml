@@ -1,0 +1,152 @@
+@startuml School Management System - Simplified UML
+
+!theme plain
+skinparam backgroundColor #FFFFFF
+skinparam classBackgroundColor #F8F9FA
+skinparam classBorderColor #6C757D
+skinparam arrowColor #495057
+skinparam classFontSize 14
+skinparam classFontStyle bold
+
+' Core Entities
+class User {
+  +email
+  +password
+  +role_id
+  --
+  +role()
+  +teacher()
+  +student()
+  +announcements()
+}
+
+class UserRole {
+  +name
+  --
+  +users()
+}
+
+class Student {
+  +first_name
+  +last_name
+  +gender
+  +nic
+  +dob
+  +index_no
+  --
+  +user()
+  +guardian()
+  +classes()
+  +subjectStream()
+}
+
+class Teacher {
+  +salutation
+  +initials
+  +first_name
+  +last_name
+  +nic
+  +dob
+  --
+  +user()
+  +subjects()
+  +classes()
+  +announcements()
+}
+
+class Guardian {
+  +initials
+  +first_name
+  +last_name
+  +nic
+  +phone_number
+  --
+  +students()
+}
+
+class Classes {
+  +name
+  +year
+  --
+  +students()
+  +teachers()
+  +subject()
+  +grades()
+}
+
+class Subject {
+  +name
+  +code
+  +description
+  --
+  +teachers()
+  +classes()
+}
+
+class SubjectStream {
+  +stream_name
+  +stream_code
+  +stream_description
+  --
+  +subjects()
+  +students()
+  +teachers()
+  +classes()
+}
+
+class Grade {
+  +name
+  --
+  +students()
+  +classes()
+}
+
+class Announcement {
+  +title
+  +content
+  +for
+  --
+  +user()
+  +class()
+  +teacher()
+}
+
+class Admin {
+  --
+  +user()
+}
+
+' Relationships
+User ||--o{ UserRole : belongs to
+User ||--o| Admin : has one
+User ||--o| Teacher : has one
+User ||--o| Student : has one
+User ||--o{ Announcement : has many
+
+Student ||--o| Guardian : belongs to
+Student }o--o{ Classes : many-to-many
+Student }o--o{ Subject : many-to-many
+Student ||--o| SubjectStream : belongs to
+
+Teacher }o--o{ Subject : many-to-many
+Teacher ||--o{ Classes : has many
+Teacher ||--o{ Announcement : has many
+
+Classes ||--o| Grade : belongs to
+Classes ||--o| Teacher : belongs to
+Classes ||--o| SubjectStream : belongs to
+Classes }o--o{ Subject : many-to-many
+
+SubjectStream }o--o{ Subject : many-to-many
+SubjectStream ||--o{ Student : has many
+SubjectStream ||--o{ Teacher : has many
+SubjectStream ||--o{ Classes : has many
+
+Grade ||--o{ Student : has many
+Grade ||--o{ Classes : has many
+
+Announcement ||--o| User : belongs to
+Announcement ||--o| Classes : belongs to
+Announcement ||--o| Teacher : belongs to
+
+@enduml 

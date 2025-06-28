@@ -1,0 +1,233 @@
+@startuml School Management System UML Class Diagram
+
+!theme plain
+skinparam classAttributeIconSize 0
+skinparam classFontSize 12
+skinparam classFontStyle bold
+skinparam backgroundColor #FFFFFF
+skinparam classBackgroundColor #F8F9FA
+skinparam classBorderColor #6C757D
+skinparam arrowColor #495057
+
+' User Management
+class User {
+  +id: bigint
+  +email: string
+  +password: string
+  +role_id: bigint
+  +email_verified_at: timestamp
+  +remember_token: string
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +role(): UserRole
+  +teacher(): Teacher
+  +student(): Student
+  +announcements(): Announcement[]
+  +classes(): Classes[]
+}
+
+class UserRole {
+  +id: bigint
+  +name: string
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +users(): User[]
+}
+
+class Admin {
+  +id: bigint
+  +user_id: bigint
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +user(): User
+}
+
+' Student Management
+class Student {
+  +id: bigint
+  +first_name: string
+  +last_name: string
+  +gender: string
+  +nic: string
+  +dob: date
+  +index_no: string
+  +user_id: bigint
+  +guardian_id: bigint
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +user(): User
+  +guardian(): Guardian
+  +classes(): Classes[]
+  +subjectStream(): SubjectStream
+}
+
+class Guardian {
+  +id: bigint
+  +initials: string
+  +first_name: string
+  +last_name: string
+  +nic: string
+  +phone_number: string
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +students(): Student[]
+}
+
+' Teacher Management
+class Teacher {
+  +id: bigint
+  +salutation: string
+  +initials: string
+  +first_name: string
+  +last_name: string
+  +nic: string
+  +dob: date
+  +user_id: bigint
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +user(): User
+  +subjects(): Subject[]
+  +classes(): Classes[]
+  +announcements(): Announcement[]
+}
+
+' Academic Management
+class Classes {
+  +id: bigint
+  +grade_id: bigint
+  +teacher_id: bigint
+  +subject_stream_id: bigint
+  +name: string
+  +year: year
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +students(): Student[]
+  +teachers(): Teacher
+  +subject(): Subject
+  +grades(): Grade
+}
+
+class Subject {
+  +id: bigint
+  +name: string
+  +code: string
+  +description: text
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +teachers(): Teacher[]
+  +classes(): Classes[]
+}
+
+class SubjectStream {
+  +id: bigint
+  +stream_name: string
+  +stream_code: string
+  +stream_description: text
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +subjects(): Subject[]
+  +students(): Student[]
+  +teachers(): Teacher[]
+  +classes(): Classes[]
+}
+
+class Grade {
+  +id: bigint
+  +name: string
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +students(): Student[]
+  +classes(): Classes[]
+}
+
+' Communication
+class Announcement {
+  +id: bigint
+  +title: string
+  +content: text
+  +for: string
+  +teacher_id: bigint
+  +user_id: bigint
+  +class_id: bigint
+  +created_at: timestamp
+  +updated_at: timestamp
+  --
+  +user(): User
+  +class(): Classes
+  +teacher(): Teacher
+}
+
+' Pivot Tables
+class class_student {
+  +id: bigint
+  +class_id: bigint
+  +student_id: bigint
+  +created_at: timestamp
+  +updated_at: timestamp
+}
+
+class student_subjects {
+  +id: bigint
+  +subject_id: bigint
+  +student_id: bigint
+  +created_at: timestamp
+  +updated_at: timestamp
+}
+
+class subject_stream_subject {
+  +id: bigint
+  +subject_stream_id: bigint
+  +subject_id: bigint
+  +created_at: timestamp
+  +updated_at: timestamp
+}
+
+' Relationships
+User ||--o{ UserRole : belongs to
+User ||--o| Admin : has one
+User ||--o| Teacher : has one
+User ||--o| Student : has one
+User ||--o{ Announcement : has many
+
+Student ||--o| Guardian : belongs to
+Student }o--o{ Classes : many-to-many
+Student }o--o{ Subject : many-to-many
+Student ||--o| SubjectStream : belongs to
+
+Teacher }o--o{ Subject : many-to-many
+Teacher ||--o{ Classes : has many
+Teacher ||--o{ Announcement : has many
+
+Classes ||--o| Grade : belongs to
+Classes ||--o| Teacher : belongs to
+Classes ||--o| SubjectStream : belongs to
+Classes }o--o{ Subject : many-to-many
+
+SubjectStream }o--o{ Subject : many-to-many
+SubjectStream ||--o{ Student : has many
+SubjectStream ||--o{ Teacher : has many
+SubjectStream ||--o{ Classes : has many
+
+Grade ||--o{ Student : has many
+Grade ||--o{ Classes : has many
+
+Announcement ||--o| User : belongs to
+Announcement ||--o| Classes : belongs to
+Announcement ||--o| Teacher : belongs to
+
+' Pivot table relationships
+Classes }o--o{ Student : class_student
+Student }o--o{ Subject : student_subjects
+SubjectStream }o--o{ Subject : subject_stream_subject
+
+@enduml 
