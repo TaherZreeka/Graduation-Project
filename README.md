@@ -1,6 +1,6 @@
 # مشروع التخرج
 
-![منصة المنشورات](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/first_page.png)
+![ مشروع التخرج](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/first_page.png)
 
 ## التثبيت والإعداد
 1. أولًا، عليك استنساخ المستودع على جهازك المحلي. للقيام بذلك، يمكنك تشغيل الأمر التالي في الطرفية.
