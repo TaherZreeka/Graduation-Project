@@ -1,62 +1,64 @@
-# Graduation-project
+# مشروع التخرج
 
-## Installation and Setup
-1. First, you have to clone the repository to your local machine. To do so you can run the following command in your terminal.
-    ```bash
-    git clone https://github.com/TaherZreeka/Graduation-project.git
-    ```
+![منصة المنشورات](https://github.com/TaherZreeka/Graduation-Project/blob/main/public/assets/img/first_page.png)
 
-2. Then you have to navigate to the project directory.
-    ```bash
-    cd Graduation-project
-    ```
+## التثبيت والإعداد
+1. أولًا، عليك استنساخ المستودع على جهازك المحلي. للقيام بذلك، يمكنك تشغيل الأمر التالي في الطرفية.
+```bash
+git clone https://github.com/TaherZreeka/Graduation-project.git
+```
 
-3. Now you have to install the dependencies. To do so you can run the following command.
-    ```bash
-    composer install
-    ```
-    This will install all the dependencies that are required for the project. If you haven't installed composer yet, you can download it from [here](https://getcomposer.org/download/).
+2. بعد ذلك، عليك الانتقال إلى مجلد المشروع.
+```bash
+cd Graduation-project
+```
 
-4. Now you can create a database with mysql. You can use the following command to create the database.
-    ```sql
-    CREATE DATABASE sms;
-    ```
-   
-5. Now you have to migrate the tables to the database. To do so you can run the following command.
-    ```bash
-    php artisan migrate
-    ```
-    This will create all the tables that are required for the project.
+3. الآن عليك تثبيت التبعيات. للقيام بذلك، يمكنك تشغيل الأمر التالي.
+```bash
+composer install
+```
+سيؤدي هذا إلى تثبيت جميع التبعيات المطلوبة للمشروع. إذا لم تقم بتثبيت composer بعد، يمكنك تنزيله من [هنا](https://getcomposer.org/download/).
 
-6. Now you can seed the database with some data. To do so you can run the following command.
-    ```bash
-    php artisan db:seed
-    ```
-    This will seed the database with some data.
+4. الآن يمكنك إنشاء قاعدة بيانات باستخدام mysql. يمكنك استخدام الأمر التالي لإنشاء قاعدة البيانات.
+```sql
+CREATE DATABASE sms;
+```
 
-7. Now you can run the project. To do so you can run the following command.
-    ```bash
-    php artisan serve
-    ```
-    This will start the server, and you can access the project by navigating to,
-    ```
-    http://127.0.0.1:8000
-   ```
-   
-8. Now you can log into the system using the following credentials.
+5. الآن، عليك ترحيل الجداول إلى قاعدة البيانات. للقيام بذلك، يمكنك تنفيذ الأمر التالي:
+```bash
+php artisan migrate
+```
+سيؤدي هذا إلى إنشاء جميع الجداول المطلوبة للمشروع.
 
-    > Admin:<br>
-        Email: test@admin.com<br>
-        Password: admin123
-        
-    > Teacher:<br>
-        Email:test@teacher.com<br>
-        Password: teacher123
-    
-    > Student:<br>
-        Email: test@student.com<br>
-        Password: student123
+6. الآن، يمكنك تزويد قاعدة البيانات ببعض البيانات. للقيام بذلك، يمكنك تنفيذ الأمر التالي:
+```bash
+php artisan db:seed
+```
+سيؤدي هذا إلى تزويد قاعدة البيانات ببعض البيانات.
 
-`If there are any issues, please let me know. I will try to help you as much as I can.`
+7. الآن، يمكنك تشغيل المشروع. للقيام بذلك، يمكنك تنفيذ الأمر التالي.
+```bash
+php artisan Serve
+```
+سيؤدي هذا إلى تشغيل الخادم، ويمكنك الوصول إلى المشروع بالانتقال إلى:
+```
+http://127.0.0.1:8000
+```
+
+8. يمكنك الآن تسجيل الدخول إلى النظام باستخدام بيانات الاعتماد التالية:
+
+> المدير:<br>
+البريد الإلكتروني: test@admin.com<br>
+كلمة المرور: admin123
+
+> المعلم:<br>
+البريد الإلكتروني: test@teacher.com<br>
+كلمة المرور: teacher123
+
+> الطالب:<br>
+البريد الإلكتروني: test@student.com<br>
+كلمة المرور: student123
+
+
 
 
